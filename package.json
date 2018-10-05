@@ -1,12 +1,16 @@
 {
   "name": "password-checker",
   "version": "1.0.0",
-  "description": "",
+  "description": "Check the security of your password.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp watch"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jverschragen/password-checker.git"
+  },
+  "author": "Jelle Verschragen",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.24.7",
