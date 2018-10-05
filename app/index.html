@@ -13,8 +13,12 @@
                 <div class="row">
                     <h1 class="header__title">Hoe veilig is mijn wachtwoord?</h1>
                     <div class="strength-input">
-                        <input type="text" id="my-password" class="input--large" placeholder="Enter a password...">
+                        <input type="password" id="my-password" class="input--large" placeholder="Enter a password...">
                     </div>
+                    <label for="show_password">
+                        <input type="checkbox" name="show_password" id="show_password">
+                        Show Password
+                    </label>
                 </div>
             </div>
         </div>
@@ -37,14 +41,14 @@
                                 <p>Je wachtwoord bevat geen special character. Maak het sterker door een special character toe te voegen.</p>
                             </div>
                             <div class="row" id="addnumbers">
-                                <h3>Voeg Nummers toe</h3>
-                                <p>Je wachtwoord bevat geen nummber. Maak het sterker door minimaal 2 nummers toe te voegen.</p>
+                                <h3>Voeg minimaal 2 nummers toe</h3>
+                                <p>Je wachtwoord bevat geen nummers. Maak het sterker door minimaal 2 nummers toe te voegen.</p>
                             </div>
-                            <div class="row" id="addlow">
+                            <div class="row" id="addup">
                                 <h3>Voeg hoofdletters toe</h3>
                                 <p>Je wachtwoord bevat alleen kleine letters. Maak het sterker door een hoofdletters toe te voegen.</p>
                             </div>
-                            <div class="row" id="addhigh">
+                            <div class="row" id="addlow">
                                 <h3>Voeg kleine letters toe</h3>
                                 <p>Je wachtwoord bevat alleen hoofdletters. Maak het sterker door een kleine letters toe te voegen.</p>
                             </div>
