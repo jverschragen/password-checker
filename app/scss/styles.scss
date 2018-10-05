@@ -1,11 +1,23 @@
+$font-family: 'Lato', sans-serif;
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
 body{
-  font-family: 'Lato', sans-serif;
+  font-family: $font-family;
+  @include font-size(15px);
   margin: 0;
   padding: 0;
 }
 
 h3{
-  font-size: 15px;
+  @include font-size(15px);
   margin: 0 0 2px;
 }
 
@@ -68,7 +80,6 @@ h3{
   text-align: left;
 }
 .box__content p {
-  font-size: 15px;
   line-height: 22px;
   text-align: left;
   margin-bottom: 5px;
