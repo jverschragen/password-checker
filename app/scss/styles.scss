@@ -1,11 +1,18 @@
+$font-family: 'Lato', sans-serif;
+
+$font-size-regular: 15px;
+
+
+
 body{
-  font-family: 'Lato', sans-serif;
+  font-family: $font-family;
+  font-size: $font-size-regular;
   margin: 0;
   padding: 0;
 }
 
 h3{
-  font-size: 15px;
+  font-size: $font-size-regular;
   margin: 0 0 2px;
 }
 
@@ -68,7 +75,6 @@ h3{
   text-align: left;
 }
 .box__content p {
-  font-size: 15px;
   line-height: 22px;
   text-align: left;
   margin-bottom: 5px;
