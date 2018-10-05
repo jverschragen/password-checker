@@ -19,7 +19,7 @@ function start_analyze() {
         // Check if password is strong
         let strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]{2})(?=.*[!@#\$%\^&\*])(?=.{8,})");
         // Check if password is medium
-        let mediumRegex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]{2}))|((?=.*[A-Z])(?=.*[0-9]{2})))(?=.{6,})");
+        let mediumRegex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
 
         if (strongRegex.test(password)){
             strength.style.backgroundColor = "#43a047";
