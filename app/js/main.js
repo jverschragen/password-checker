@@ -77,6 +77,7 @@ function start_analyze() {
         details.style.display = "block";
     } else{
         details.style.display = "none";
+        strength.style.backgroundColor = "#f6f6f6";
     }
 }
 
