@@ -8,6 +8,9 @@ const uppercaseTip = details.querySelector("#addup");
 const numberTip = details.querySelector("#addnumbers");
 const specialCharacterTip = details.querySelector("#addchar");
 
+const headerTitle = strength.querySelector(".header__title");
+const headerSubtitle = strength.querySelector(".header__subtitle");
+
 function start_analyze() {
 
     //password value
@@ -22,11 +25,24 @@ function start_analyze() {
         let mediumRegex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
 
         if (strongRegex.test(password)){
+            headerTitle.innerHTML = "Erg sterk";
+            headerSubtitle.innerHTML = "Gefeliciteerd! Je wachtwoord is veilig";
+
             strength.style.backgroundColor = "#43a047";
+            strength.style.color = "#fff";
+
         } else if (mediumRegex.test(password)){
+            headerTitle.innerHTML = "Matig";
+            headerSubtitle.innerHTML = "Je wachtwoord is niet zo sterk. We raden aan het te veranderen door de tips hieronder te volgen.";
+
             strength.style.backgroundColor = "#e57136";
+            strength.style.color = "#fff";
         } else{
+            headerTitle.innerHTML = "Zwak";
+            headerSubtitle.innerHTML = "Je wachtwoord is veel te zwak. We raden aan het te veranderen door de tips hieronder te volgen.";
+
             strength.style.backgroundColor = "#e53935";
+            strength.style.color = "#fff";
         }
 
         // Check if min 1 lowercase
@@ -77,7 +93,12 @@ function start_analyze() {
         details.style.display = "block";
     } else{
         details.style.display = "none";
+
+        headerTitle.innerHTML = "Hoe veilig is mijn wachtwoord?";
+        headerSubtitle.innerHTML = "Controleer of je wachtwoord veilig genoeg is.";
+
         strength.style.backgroundColor = "#f6f6f6";
+        strength.style.color = "#000";
     }
 }
 
