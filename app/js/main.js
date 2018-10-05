@@ -30,45 +30,45 @@ function start_analyze() {
         }
 
         // Check if min 1 lowercase
-        let lcheck = new RegExp ("^(?=.*[a-z])");
+        let lowercaseCheck = new RegExp ("^(?=.*[a-z])");
 
-        if(!lcheck.test(password)) {
+        if(!lowercaseCheck.test(password)) {
             lowercaseTip.style.display = "block";
         } else{
             lowercaseTip.style.display = "none";
         }
 
         // Check if min 1 uppercase
-        let ucheck = new RegExp("^(?=.*[A-Z])");
+        let uppercaseCheck = new RegExp("^(?=.*[A-Z])");
 
-        if(!ucheck.test(password)){
+        if(!uppercaseCheck.test(password)){
             uppercaseTip.style.display = "block";
         } else{
             uppercaseTip.style.display = "none";
         }
 
         // check if min 2 numbers
-        let ncheck = new RegExp("^(?=.*[0-9]{2})");
+        let numberCheck = new RegExp("^(?=.*[0-9]{2})");
 
-        if(!ncheck.test(password)){
+        if(!numberCheck.test(password)){
             numberTip.style.display = "block";
         } else{
             numberTip.style.display = "none";
         }
 
         // check if min 1 special character
-        let scheck = new RegExp("^(?=.*[!@#\\$%\\^&\\*])");
+        let specialCharacterCheck = new RegExp("^(?=.*[!@#\\$%\\^&\\*])");
 
-        if(!scheck.test(password)){
+        if(!specialCharacterCheck.test(password)){
             specialCharacterTip.style.display = "block";
         } else{
             specialCharacterTip.style.display = "none";
         }
 
         // check if min 8 characters
-        let ccheck = new RegExp("^(?=.{8,})");
+        let lengthCheck = new RegExp("^(?=.{8,})");
 
-        if(!ccheck.test(password)){
+        if(!lengthCheck.test(password)){
             lengthTip.style.display = "block";
         } else{
             lengthTip.style.display = "none";
@@ -96,16 +96,15 @@ document.addEventListener('click', function (event) {
     if (event.target.id !== 'show_password') return;
 
     // Get the password field
-    var password = document.querySelector('#my-password');
-    if (!password) return;
+    if (!passwordInput) return;
 
     // Check if the password should be shown or hidden
     if (event.target.checked) {
         // Show the password
-        password.type = 'text';
+        passwordInput.type = 'text';
     } else {
         // Hide the password
-        password.type = 'password';
+        passwordInput.type = 'password';
     }
 
 }, false);
